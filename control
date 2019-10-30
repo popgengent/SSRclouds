@@ -1,0 +1,28 @@
+### SSR-related###
+motifmax = 6			# used in a bunch of runmodes (optional)		# maximum length of the SSR motif
+rev_com = 1			# used in a bunch of runmodes (optional)		# include reverse complement of motif in motif family (1) or not (0)
+oligolength = 12		# used in a bunch of runmodes (optional)		# length of output perfect SSR oligos for use as p-clouds
+motifs_of_interest = ATTG AAG		# used in a bunch of runmodes (optional)		# list of motifs for analysis, comment out or leave blank to run on all families, supplied as space-separated list
+thread_count = 20		# used for AnnotatePerfects and BuildClouds (optional at command)
+core_set = 4			# used in buildClouds (optional)			# number of annotations in test set will be divided by core_set to determine most stringent core threshold
+shell_factor = .5		# would be used in buildClodus (optional), currently not used	# shell parameter reduction from core
+cloud_info_file = cloud_info	# used in buildClouds (optional)			# record of cloud formation by family
+slop_len = 50			# used in buildClouds (optional)			# number of bases flanking pure repeats to use as template for cloud formation
+cloud_kmer_length = 16		# used in buildClouds (optional)			# length of oligos in clouds									# number of files to send at once for cloud building and annotations
+
+cloud_strin_cutoff = 5		# used in combineClouds (optional, but set to default=5)# stringency cutoff for core identification
+max_fams = 50			# used in annotateFams (optional)			# number of fams to print for each locus
+
+perfect_assign_dir = PERFECTS		# no longer needed						# folder to store assign files of perfect repeats
+bed_folder = PERFECTS_BEDS
+fasta_folder = CLOUD_FASTAS
+assign_folder = CLOUDS
+max_strin = 5
+training_perc = 0.9		# no longer needed					# percentage of perfect repeat annotations to use to train clouds
+
+###
+seed = 248598											# seed for random number generator, if needed
+loudness = 2											# detail of program output, default is murmur (2)
+record_loudness = 2										# loudness for record file, default is talk (2)
+errorout = ErrorLog_SSR_finder.txt						# record of errors, appended
+record_run = RunRecord_SSR_finder.txt					# record of runs, appended
